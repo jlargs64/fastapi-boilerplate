@@ -8,14 +8,14 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.scripts]
-start = "app:main"
+start = "uvicorn main:app --host 0.0.0.0 --port 8000"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 pydantic-settings = "^2.4.0"
 python-dotenv = "^1.0.1"
 sqlalchemy = "^2.0.32"
-uvicorn = "^0.30.6"
+uvicorn = {extras = ["standard"], version = "^0.30.6"}
 fastapi = "^0.112.2"
 
 [tool.poetry.dev-dependencies]
